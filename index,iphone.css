@@ -1,0 +1,34 @@
+BODY {
+	margin: 0;
+	width: 480px;
+	height: 100%;
+}
+DIV#content {
+	min-height: 100%;
+	position: relative;
+	padding: 25px 0 160px 25px;
+}
+DIV#content > DIV.cell {
+	display: block;
+	width: 250px;
+	text-align: center;
+}
+DIV#content > DIV.cell + DIV.cell {
+	margin-top: 20px;
+}
+DIV#content > DIV.cell IMG {
+	max-width: 250px;
+	max-height: 100px;
+	vertical-align: middle;
+	border: none;
+}
+DIV#content > DIV A {
+	text-decoration: none;
+}
+DIV#content > DIV#signature {
+	position: absolute;
+	bottom: 0;
+	width: 480px;
+	height: 160px;
+	background: url('pictures/looking,small.png') no-repeat right bottom;
+}
