@@ -1,68 +1,52 @@
 BODY {
 	margin: 0;
+	font-family: Georgia, serif;
 }
 DIV#content {
 	width: 800px;
-	height: 100%;
 	background: url('pictures/looking,small.png') no-repeat right bottom;
 	margin-left: auto;
 	margin-right: auto;
+	border: 1px solid white;
 }
-DIV#content > DIV.cell {
-	position: absolute;
-	height: 80px;
-	line-height: 80px;
-	width: 150px;
-	border-left: 10px solid white;
-	border-top: 10px solid white;
-	padding-left: 5px;
-	padding-top: 5px;
-	-moz-border-radius-topleft: 15px;
-	-webkit-border-top-left-radius: 15px;
+DIV#cells {
+	width: 100%;
+	clear: both;
 }
-DIV#content > DIV.row1 {
-	top: 100px;
+DIV#cells > DIV.row {
+	text-align: right;
+	clear: both;
 }
-DIV#content > DIV.row2 {
-	top: 300px;
+DIV#bubble {
+	width: 500px;
+	border: 10px solid #555;
+	padding: 20px;
+	margin-bottom: 150px;
+	border-radius: 30px 30px 0 30px;
+	-moz-border-radius: 30px 30px 0 30px;
+	-webkit-border-radius: 30px 30px 0 30px;
+	-moz-transform: rotate(5deg);
+	-webkit-transform: rotate(5deg);
+	clear: both;
 }
-DIV#content > DIV.row3 {
-	top: 500px;
+DIV#bubble:before, DIV#bubble:after {
+	color: #ccc;
+	display: block;
+	font-size: 700%;
+	width: 50px;
 }
-DIV#content > DIV.col1 {
-	left: 100px;
-	-moz-transform: rotate(30deg);
-	-webkit-transform: rotate(30deg);
+DIV#bubble:before {
+	content: '\201C';
+	height: 0;
+	margin-left: -90px;
 }
-DIV#content > DIV.col2 {
-	left: 300px;
-	-moz-transform: rotate(40deg);
-	-webkit-transform: rotate(40deg);
+DIV#bubble:after {
+	content: '\201D';
+	height: 50px;
+	margin-top: -70px;
+	margin-left: 540px;
 }
-DIV#content > DIV.col3 {
-	left: 500px;
-	-moz-transform: rotate(50deg);
-	-webkit-transform: rotate(50deg);
-}
-DIV#content > DIV.col4 {
-	left: 700px;
-	-moz-transform: rotate(60deg);
-	-webkit-transform: rotate(60deg);
-}
-DIV#content > DIV.cell IMG {
-	max-width: 150px;
-	max-height: 60px;
-	vertical-align: middle;
-	border: none;
-}
-DIV#content > DIV A {
-	text-decoration: none;
-}
-DIV#content > DIV:hover {
-	border-left: 10px solid #ccf;
-	border-top: 10px solid #ccf;
-}
-DIV#content > DIV#signature {
+DIV#signature {
 	position: absolute;
 	bottom: 20px;
 	left: 20%;
@@ -70,4 +54,24 @@ DIV#content > DIV#signature {
 	font-family: Helvetica, Arial, Verdana, sans-serif;
 	font-size: 24px;
 	color: #ccc;
+}
+DIV.row > DIV {
+	display: inline;
+	height: 80px;
+	line-height: 80px;
+	border-left: 10px solid white;
+	border-top: 10px solid white;
+	padding-left: 5px;
+}
+A {
+	text-decoration: none;
+	color: #0404b8;
+}
+DIV.row > DIV > A > IMG {
+	max-width: 100px;
+	max-height: 60px;
+	vertical-align: middle;
+	border: none;
+	-moz-transform: rotate(30deg);
+	-webkit-transform: rotate(30deg);
 }
