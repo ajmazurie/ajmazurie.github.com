@@ -4,29 +4,33 @@ BODY {
 }
 DIV#content {
 	width: 800px;
-	background: url('pictures/looking,small.png') no-repeat right bottom;
-	margin-left: auto;
-	margin-right: auto;
-	border: 1px solid white;
+	margin: 10px auto 0 auto;
+}
+UL {
+	list-style-type: square;
+	padding-left: 20px;
+}
+UL > LI + LI {
+	margin-top: 7px;
 }
 DIV#cells {
 	width: 100%;
 	clear: both;
 }
 DIV#cells > DIV.row {
-	text-align: right;
+	text-align: center;
 	clear: both;
 }
 DIV#bubble {
 	width: 500px;
 	border: 10px solid #555;
 	padding: 20px;
-	margin-bottom: 150px;
+	margin: 50px auto 20px auto;
 	border-radius: 30px 30px 0 30px;
 	-moz-border-radius: 30px 30px 0 30px;
 	-webkit-border-radius: 30px 30px 0 30px;
-	-moz-transform: rotate(5deg);
-	-webkit-transform: rotate(5deg);
+	/** -moz-transform: rotate(5deg);
+	-webkit-transform: rotate(5deg); **/
 	clear: both;
 }
 DIV#bubble:before, DIV#bubble:after {
@@ -47,13 +51,8 @@ DIV#bubble:after {
 	margin-left: 540px;
 }
 DIV#signature {
-	position: absolute;
-	bottom: 20px;
-	left: 20%;
-	text-align: center;
-	font-family: Helvetica, Arial, Verdana, sans-serif;
-	font-size: 24px;
-	color: #ccc;
+	height: 200px;
+	background: url('pictures/looking,small.png') no-repeat right bottom;
 }
 DIV.row > DIV {
 	display: inline;
@@ -68,7 +67,7 @@ A {
 	color: #0404b8;
 }
 DIV.row > DIV > A > IMG {
-	max-width: 100px;
+	max-width: 120px;
 	max-height: 60px;
 	vertical-align: middle;
 	border: none;
